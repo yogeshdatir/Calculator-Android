@@ -137,40 +137,56 @@ public class MainActivity extends Activity  {
 
             @Override
             public void onClick(View v) {
-                val1=Double.parseDouble(t2.getText()+"");
-                add=true;
-                t2.setText(null);
-                t1.setText(val1+" + ");
+                if (t2.getText() == "" || t2.getText() == null) {
+
+                }else {
+                    val1 = Double.parseDouble(t2.getText() + "");
+                    add = true;
+                    t2.setText(null);
+                    t1.setText(val1 + " + ");
+                }
             }
         });
         b12.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                val1=Double.parseDouble(t2.getText()+"");
-                sub=true;
-                t2.setText(null);
-                t1.setText(val1+" - ");
+                if (t2.getText() == "" || t2.getText() == null) {
+
+                }else {
+                    val1 = Double.parseDouble(t2.getText() + "");
+                    sub = true;
+                    t2.setText(null);
+                    t1.setText(val1 + " - ");
+                }
             }
         });
         b4.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                val1=Double.parseDouble(t2.getText()+"");
-                div=true;
-                t2.setText(null);
-                t1.setText(val1+" / ");
+                if (t2.getText() == "" || t2.getText() == null) {
+
+                }else {
+                    val1 = Double.parseDouble(t2.getText() + "");
+                    div = true;
+                    t2.setText(null);
+                    t1.setText(val1 + " / ");
+                }
             }
         });
         b8.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                val1=Double.parseDouble(t2.getText()+"");
-                mul=true;
-                t2.setText(null);
-                t1.setText(val1+" x ");
+                if (t2.getText() == "" || t2.getText() == null) {
+
+                }else {
+                    val1 = Double.parseDouble(t2.getText() + "");
+                    mul = true;
+                    t2.setText(null);
+                    t1.setText(val1 + " x ");
+                }
             }
         });
 
@@ -178,26 +194,30 @@ public class MainActivity extends Activity  {
 
             @Override
             public void onClick(View v) {
-                val2=Double.parseDouble(t2.getText()+"");
-                if (add==true) {
-                    t1.setText(val1+" + "+val2+" = ");
-                    t2.setText(val1+val2+"");
-                    add=false;
-                }
-                if (sub==true) {
-                    t1.setText(val1+" - "+val2+" = ");
-                    t2.setText(val1-val2+"");
-                    sub=false;
-                }
-                if (mul==true) {
-                    t1.setText(val1+" x "+val2+" = ");
-                    t2.setText(val1*val2+"");
-                    mul=false;
-                }
-                if (div==true) {
-                    t1.setText(val1+" / "+val2+" = ");
-                    t2.setText(val1/val2+"");
-                    div=false;
+                if (t2.getText() == "" || t2.getText() == null) {
+
+                }else {
+                    val2 = Double.parseDouble(t2.getText() + "");
+                    if (add == true) {
+                        t1.setText(val1 + " + " + val2 + " = ");
+                        t2.setText(val1 + val2 + "");
+                        add = false;
+                    }
+                    if (sub == true) {
+                        t1.setText(val1 + " - " + val2 + " = ");
+                        t2.setText(val1 - val2 + "");
+                        sub = false;
+                    }
+                    if (mul == true) {
+                        t1.setText(val1 + " x " + val2 + " = ");
+                        t2.setText(val1 * val2 + "");
+                        mul = false;
+                    }
+                    if (div == true) {
+                        t1.setText(val1 + " / " + val2 + " = ");
+                        t2.setText(val1 / val2 + "");
+                        div = false;
+                    }
                 }
             }
 
